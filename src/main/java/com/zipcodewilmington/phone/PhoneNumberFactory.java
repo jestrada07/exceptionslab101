@@ -53,6 +53,7 @@ public final class PhoneNumberFactory {
         } try {
             return createPhoneNumber(number);
         } catch (InvalidPhoneNumberFormatException e) {
+            logger.warning(areaCode + "-" + centralOfficeCode  + "-" + phoneLineCode   + "" + " is not a valid phone number");
             return null;
         }
     }
